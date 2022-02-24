@@ -1,7 +1,7 @@
 <template>
   <div>
     <img
-    class="h-80 cursor-pointer"
+    class="h-80 w-80 cursor-pointer"
       :src="require(`@/assets/images/${image}`)"
       :alt="image"
       :title="image"
@@ -22,14 +22,4 @@ export default {
 </script>
 
 <style scoped>
-/*
-img {
-    height: 100%;
-    max-height: 300px;
-    cursor: pointer;
-}
-img :hover {
-    border: 20px solid green;
-}
-*/
 </style>

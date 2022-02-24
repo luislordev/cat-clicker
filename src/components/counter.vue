@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col md:flex-row items-center">
     <div class="text-center">
-      <h2 class="p-3 font-bold text-2xl uppercase">{{ cat.catName }}</h2>
+      <h2 class="p-3 font-bold text-2xl uppercase">{{ cat.name }}</h2>
       <cat :image="cat.image" @click="increment()" />
     </div>
 
@@ -32,14 +32,4 @@ export default {
 </script>
 
 <style scoped>
-/*
-.flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.text-center {
-  text-align: center;
-}
-*/
 </style>
