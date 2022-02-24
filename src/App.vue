@@ -1,12 +1,15 @@
 <template>
-  <div class="container">
-    <h1 class="text-center">Cat Clicker 🐱</h1>
-    <div>
-      <counter
-        :cat="cat"
-        v-model="cat.counter"
-        @event-increment="cat.counter++"
-      />
+  <div class="flex flex-col pt-10 mb-5">
+    <h1 class="text-4xl font-bold text-center">Cat Clicker 🐱</h1>
+    <div class="flex flex-col md:flex-row  justify-around">
+      <div v-for="cat in cats" :key="cat.name">
+        <counter
+          class="p-10"
+          :cat="cat"
+          v-model="cat.counter"
+          @event-increment="cat.counter++"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -18,25 +21,19 @@ export default {
   name: "App",
   data() {
     return {
-       cat: {
-        catName: 'doraemon', 
-        image:'doraemon.png',
-        counter: 0
-      }
+      cats: [
+        { catName: "Doraemon", image: "doraemon.png", counter: 0},
+        { catName: "Garfield", image: "garfield.png", counter: 0},
+      ],
     };
   },
 };
 </script>
 
 <style scoped>
-* {
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
+/*
 body {
-  padding: 1vh;
+  padding: 10vh;
   margin-top: 60px;
 }
 .container {
@@ -44,6 +41,20 @@ body {
   flex-direction: column;
 }
 .text-center {
-   text-align: center;
+  text-align: center;
 }
+
+.cat-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.cat-display {
+  max-width: 45%; 
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+*/
 </style>

@@ -1,26 +1,35 @@
 <template>
   <div>
-      <img :src="require(`@/assets/images/${image}`)" :alt="image" :title="image"/>
+    <img
+    class="h-80 cursor-pointer"
+      :src="require(`@/assets/images/${image}`)"
+      :alt="image"
+      :title="image"
+    />
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Cat',
-    props: {
-        image: {
-            type: String,
-            required: true
-        }
-    }
-
-}
+  name: "Cat",
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped>
+/*
 img {
-    width: 300px;
-    height: 300px;
+    height: 100%;
+    max-height: 300px;
     cursor: pointer;
 }
+img :hover {
+    border: 20px solid green;
+}
+*/
 </style>
